@@ -18,7 +18,7 @@ int main(void)
 
    }
 
-   if (n=0)
+   if (n==0)
    {
      printf("%d is zero\n", n);
 

@@ -1,8 +1,15 @@
+
 #include "main.h"
-#include <unistd.h>
-	int _putchar(char c)
+#include <string.h>
+int main(void)
+{
+	char string[20] = "_putchar";
+	unsigned int i;
+
+	for (i = 0; i < strlen(string); i++)
 	{
-		return (write(1, &c, 1));
-		_putchar('\n');
-	     return (0);
+		_putchar(string[i]);
 	}
+	_putchar('\n');
+	return (0);
+}

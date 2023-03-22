@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * add - adds two integers
+ *@i: integers to add
+ *@j: second integer to add
+ * Return: addition result
  */
 int add(int i, int j)
 {

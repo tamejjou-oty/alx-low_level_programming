@@ -3,7 +3,7 @@
 void print_alphabet(void)
 {
 	char harf ='a';
-	while harf (<= 'z')
+	while (harf <= 'z')
 	{
 		_putchar(harf);
 		harf++;

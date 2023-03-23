@@ -1,13 +1,14 @@
 #include "main.h"
 
-/* mul - multiplies two intefers
- * @a: char to be checked
- * @b: char to be checked
- * Return: Always 0.
+/* mul - multiplies two integers
+ * @a: first integers
+ * @b: secind integers
+ * Return: addition of the multiplicattion
  *
  */
 
 int mul(int a, int b)
 {
-	return (a * b);
+	int result = a * b;
+	return result;
 }

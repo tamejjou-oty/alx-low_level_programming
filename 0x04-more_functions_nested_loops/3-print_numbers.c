@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_numbers- check the code
+ * print_numbers - print 0 - 9
  *
- * Return: Always 0. 
+ * Return: Always 0.  
  */
 void print_numbers(void);
 {
@@ -14,4 +14,8 @@ void print_numbers(void);
 		_putchar(i);
 	}
 		_putchar('\n');
+}
+int main() {
+    print_numbers();  // call the function
+    return 0;
 }

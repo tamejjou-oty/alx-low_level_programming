@@ -1,10 +1,9 @@
-#include "maine.h"
-/*
- *more_numbers - prints 10 times the numbers, from 0 to 14
- *
- *return: void
- *
- * */
+#include "main.h"
+
+/**
+ *  * more_numbers - print more numbers
+ */
+
 void more_numbers(void)
 {
 	int a, b;

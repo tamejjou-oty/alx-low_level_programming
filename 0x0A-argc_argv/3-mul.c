@@ -16,11 +16,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return 1;
 	}
-
-	int num1 = atoi(argv[1]) , num2 = atoi(argv[2]);
-	int redult = nim1 * num2;
-
-	printf("%d\n",result);
+	printf("%d\n",atatoi(*(argv + 1)) * atoi(argv[argc - 1]));
 
 	return 0;
 }

@@ -2,29 +2,30 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * *_strdup - return a pointer to new allocated space in memory
- * @oty: cher
+ * _strdup - returns a pointer to a newly allocated space in memory
+ * @str: char
  *
  * Return: 0
  */
 char *_strdup(char *str)
 {
-	char *t;
+	char *aaa;
 	int i, r = 0;
 
-	if (oty == NULL)
+	if (str == NULL)
 		return (NULL);
-	i =0;
-	while (oty[i] != '\0')
+	i = 0;
+	while (str[i] != '\0')
 		i++;
 
-	t = malloc(sizeof(char) * (i +1));
+	aaa = malloc(sizeof(char) * (i + 1));
 
-	if (t == NULL)
+	if (aaa == NULL)
 		return (NULL);
 
-	for (r = 0; oty[r]; r++)
-		t[r] = oty[r];
+	for (r = 0; str[r]; r++)
+		aaa[r] = str[r];
 
-	return (t);
+	return (aaa);
 }
+

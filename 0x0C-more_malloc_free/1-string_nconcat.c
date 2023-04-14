@@ -1,6 +1,5 @@
-#include <string.h>
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * string_nconcat - concatenates two strings
  * @s1: first string
@@ -10,34 +9,34 @@
  * Return: pointer to new string containg s1 and n bytes of s2
  * or NULL if function fails
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n0)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int i, j;
+	unsigned int len1 = 0, len2 = 0;
+	char *a;
+
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
-	unsigned int s1_len = strlen(s1);
-	unsigned int s2_len = strlen(s2);
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
 
-	if (n <= s2_len) 
+	if (n >= len2)
 	{
-		n = s2_len;
+		n = len2;
 	}
+	a = malloc((len1 + n + 1) * sizeof(char));
+	if (a == NULL)
+		return (NULL);
 
-	char *result = malloc((s1_len + 1) * sizeof(char));
-
-	if (result == NULL) 
-	{
-		return NULL;
-	}
-	memcpy(result, s1, s1_len);
-	memcpy(result + s1_len, s2, n);
-	result[s1_len + n] = '\0';
-
-	return result;
+	for (i = 0; i < len1; i++)
+		a[i] = s1[i];
+	for (j = 0; j < n; j++, i++)
+		a[i] = s2[j];
+	a[i] = '\0';
+	return (a);
 }
